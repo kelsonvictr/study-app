@@ -11,6 +11,7 @@ const EdicaoCartaoScreen = ({ route, navigation }) => {
     const cartao = cartoes.find(c => c.id === id) || {}
 
     const [titulo, setTitulo] = useState(cartao.titulo || '')
+    
     const [notas, setNotas] = useState(cartao.notas || '')
     const [status, setStatus] = useState(cartao.status || 'backlog')
     const [dataTermino, setDataTermino] = useState(cartao.dataTermino ? new Date(cartao.dataTermino) : new Date())
